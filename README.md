@@ -1,5 +1,5 @@
-# Pokédex estilo Kalos
-Práctica CSS - Semana 4 🚀
-
+# Pokédex región Kalos
+Práctica JS - Semana 4 🚀
+Pokédex usando Pokeapi
 
 🚀 Versión online: https://viridianab.github.io/pokedex/
