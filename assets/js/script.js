@@ -9,13 +9,14 @@ const fetchPokemon = () => {
 		.then((res) => {
 			if (res.status != "200") {
 				// Mostrar imagen de error
-				pokeImage("./pokemon-sad.gif");
+				pokeImage("assets/img/error.gif");
 				// Borrar datos anteriores
-				document.getElementById("pokemonId").innerHTML = "";
-				document.getElementById("pokemonNombre").innerHTML = "";
+				document.getElementById("pokemonId").innerHTML = "ERROR";
+				document.getElementById("pokemonNombre").innerHTML = "Try Again";
 				document.getElementById("pokemonTipo").innerHTML = "";
 				document.getElementById("pokeStats").innerHTML = "";
 				document.getElementById("pokeMoves").innerHTML = "";
+				document.getElementsByClassName("botones").style.display = "none";
 				//console.log(res);
 			} else {
 				return res.json();
@@ -168,7 +169,6 @@ const pokeMove = (url) => {
 	campo4.src = url;
 };
 
-
 // Ocultar animacion de pokedex
 setTimeout(function(){
 	var elem = document.querySelector(".bienvenida");
@@ -180,6 +180,7 @@ setTimeout(function(){
 const botonOcultar = document.getElementsByClassName("btn-ocultar")[0];
 botonOcultar.addEventListener("click", ocultarInformacion);
 function ocultarInformacion() {
+	playSonidoCancelar();
 	document.getElementsByClassName("mas-info")[0].style.display = "none";
 }
 
@@ -187,6 +188,7 @@ function ocultarInformacion() {
 const botonVerStats = document.getElementsByClassName("btn-stats")[0];
 botonVerStats.addEventListener("click", verStats);
 function verStats() {
+	playSonido();
 	document.getElementsByClassName("mas-info")[0].style.display = "block";
 	document.getElementById("pokeStats").style.display = "block";
 	document.getElementById("pokeMoves").style.display = "none";
@@ -196,7 +198,23 @@ function verStats() {
 const botonVerMoveset = document.getElementsByClassName("btn-moves")[0];
 botonVerMoveset.addEventListener("click", verMoves);
 function verMoves() {
+	playSonido();
 	document.getElementsByClassName("mas-info")[0].style.display = "block";
 	document.getElementById("pokeStats").style.display = "none";
 	document.getElementById("pokeMoves").style.display = "block";
+}
+
+// Sonido a botones
+// Sonido default
+function playSonido() {
+	const sound = new Audio("assets/sounds/boton.mp3");
+	sound.play();
+}
+const btnSonido = document.getElementsByClassName("btn")[0];
+btnSonido.addEventListener("click", playSonido);
+
+// Sonido cerrar ventana
+function playSonidoCancelar() {
+	const sound2 = new Audio("assets/sounds/cancelar.mp3");
+	sound2.play();
 }

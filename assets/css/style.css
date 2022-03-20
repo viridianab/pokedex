@@ -144,6 +144,8 @@ body {
     background: linear-gradient(139deg, rgb(255 118 127) 0%, #ff4555 49%, #ff1427 50%, #97000c 100%);
     box-shadow: inset -17px -2px 20px 0px rgb(0 0 0 / 33%), inset 2px 3px 5px 3px rgb(255 255 255 / 73%);
     overflow: clip;
+    -webkit-clip-path: path('M648.43,0H0v268.62h213.1c3.3-58.08,51.78-104.17,111.12-104.17c59.34,0,107.82,46.09,111.12,104.17h213.1V0z');
+    clip-path: path('M648.43,0H0v268.62h213.1c3.3-58.08,51.78-104.17,111.12-104.17c59.34,0,107.82,46.09,111.12,104.17h213.1V0z');
     -webkit-clip-path: url(#mascara-superior);
     clip-path: url(#mascara-superior);
 }
@@ -206,6 +208,8 @@ body {
     margin: 0 auto 0 auto;
     -webkit-clip-path: url(#medio-superior);
     clip-path: url(#medio-superior);
+    -webkit-clip-path: path('M29.98,79.55c1.05-27.51,23.75-49.57,51.52-49.57c27.77,0,50.47,22.06,51.52,49.57H163C161.93,35.51,125.8,0,81.5,0 C37.2,0,1.07,35.51,0,79.55H29.98z');
+    clip-path: path('M29.98,79.55c1.05-27.51,23.75-49.57,51.52-49.57c27.77,0,50.47,22.06,51.52,49.57H163C161.93,35.51,125.8,0,81.5,0 C37.2,0,1.07,35.51,0,79.55H29.98z');
 }
 .superior .circulos .circulo.camara {
     top: 0;
@@ -353,6 +357,8 @@ body {
     margin: 0 auto 0 auto;
     -webkit-clip-path: url(#medio-inferior);
     clip-path: url(#medio-inferior);
+    -webkit-clip-path: path('M133.02,0c-1.05,27.51-23.75,49.57-51.52,49.57C53.73,49.57,31.03,27.51,29.98,0H0c1.07,44.04,37.2,79.55,81.5,79.55 c44.3,0,80.43-35.51,81.5-79.55H133.02z');
+    clip-path: path('M133.02,0c-1.05,27.51-23.75,49.57-51.52,49.57C53.73,49.57,31.03,27.51,29.98,0H0c1.07,44.04,37.2,79.55,81.5,79.55 c44.3,0,80.43-35.51,81.5-79.55H133.02z');
 }
 .inferior .circulos .circulo.camara {
     bottom: 0;
@@ -428,7 +434,7 @@ body {
 }
 .buscador-input .input {
     color: #fff;
-    line-height: 1.5;
+    line-height: 1.85;
     background-color: #36a0dd;
     padding: 5px 6px 5px 20px;
     border: 0;
@@ -612,6 +618,7 @@ body {
     background-color: #A98FF3;
 }
 .tipo-lucha {
+    color: #fff;
     outline-color: #C22E28;
     background-color: #C22E28;
 }
@@ -699,8 +706,9 @@ body {
     left: 0;
     width: 100%;
     height: 12rem;
-    background: #36a0dd;
+    background: rgba(54, 160, 221, 0.827);
     box-shadow: 1px 1px 11px 2px rgb(255 255 255 / 25%);
+    border-radius: 24px;
     overflow: overlay;
 }
 #pokeStats {
@@ -708,7 +716,7 @@ body {
 }
 #pokeStats li {
     color: #fff;
-    line-height: 1.5;
+    line-height: 1.65;
     list-style: none;
 }
 #pokeMoves {
@@ -791,24 +799,9 @@ body {
         transform: scale(.5);
     }
 }
-/* Elemento: xxxx */
-/* Elemento: xxxx */
-/* Elemento: xxxx */
-/* Elemento: xxxx */
-/* Elemento: xxxx */
-/* Seccion: xxxx */
-/* Seccion: xxxx */
-/* Seccion: xxxx */
-/* Seccion: xxxx */
-
 
 
 /* --# Responsivo #-- */
 @media (max-width:1023px) {
-    /* --# Seccion: XXXX #-- */
-    /* --# Elemento: XXXX #-- */
-    /* --# Elemento: XXXX #-- */
-    /* --# Elemento: XXXX #-- */
-    /* --# Elemento: XXXX #-- */
     
 }
