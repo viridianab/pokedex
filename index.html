@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no">
+    <title>Pokedex</title>
+    <meta name="theme-color" content="#3858d6">
+    <meta name="msapplication-navbutton-color" content="#3858d6">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" sizes="192x192" href="assets/img/favicon/favicon-192.png">
+    <link rel="stylesheet" media="screen" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Seccion: Background -->
+    <div class="fondo-sitio">
+        <!-- Pokedex -->
+        <div class="pokedex">
+            <div class="poke__tapa">
+                <div class="tapa superior">
+                    <!-- Circulos -->
+                    <div class="circulos">
+                        <div class="circulo pequeno"></div>
+                        <div class="circulo pequeno"></div>
+                        <div class="circulo mayor"></div>
+                        <div class="circulo mayor"></div>
+                    </div>
+                    <!-- Circulo medio -->
+                    <div class="circulos medio">
+                        <div class="circulo camara"></div>
+                        <div class="circulo mascara">
+                            <svg class="svg">
+                                <clipPath id="medio-superior" clipPathUnits="objectBoundingBox">
+                                    <path
+                                        d="M0.184,1 C0.19,0.654,0.33,0.377,0.5,0.377 c0.17,0,0.31,0.277,0.316,0.623 h0.184 C0.993,0.446,0.772,0,0.5,0 C0.228,0,0.007,0.446,0,1 H0.184">
+                                    </path>
+                                </clipPath>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Sombra -->
+                    <div class="sombra-superior"></div>
+                    <div class="sombra-lateral"></div>
+                    <!-- Mascara -->
+                    <svg class="svg">
+                        <clipPath id="mascara-superior" clipPathUnits="objectBoundingBox">
+                            <path d="M1,0 H0 v1 h0.329 c0.005,-0.216,0.08,-0.388,0.171,-0.388 c0.092,0,0.166,0.172,0.171,0.388 H1 V0">
+                            </path>
+                        </clipPath>
+                    </svg>
+                </div>
+            </div><!-- // Tapa: Superior -->
+
+            <!-- // Contenido de pokedex -->
+            <div class="pokedex__contenido">
+                <div class="contenido-buscador">
+
+                    <div class="bienvenida">
+                        <span>P</span>
+                        <span>O</span>
+                        <span>K</span>
+                        <span>E</span>
+                        <span>D</span>
+                        <span>E</span>
+                        <span>X</span>
+                        <div class="pokeball"></div>
+                    </div>
+
+                    <!-- Buscador -->
+                    <div class="buscador-input">
+                        <input type="text" class="input" id="pokeName" name="pokeName" placeholder="Search">
+                        <button class="btn btn-buscar" onclick="fetchPokemon()"></button>
+                    </div>
+
+                    <!-- Pokemon Activo -->
+                    <div class="pokemon__seleccionado" id="pokemon__seleccionado" style="display: none;">
+                        <div class="pokemon__activo">
+                            <img src="" id="imagenPokemon" alt="">
+                            <h1 id="pokemonId"></h1>
+                            <h2 id="pokemonNombre"></h2>
+                            <ul id="pokemonTipo"></ul>
+                        </div>
+                        <ul class="botones">
+                            <li><button class="btn btn-stats">Stats</button></li>
+                            <li><button class="btn btn-moves">Moveset</button></li>
+                        </ul>
+                        <div class="mas-info" style="display: none;">
+                            <button class="btn btn-ocultar">x</button>
+                            <ul id="pokeStats" style="display: none;"></ul>
+                            <ul id="pokeMoves" style="display: none;"></ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Tapa: Inferior -->
+            <div class="poke__tapa">
+                <div class="tapa inferior">
+                    <!-- Circulos -->
+                    <div class="circulos">
+                        <div class="circulo pequeno"></div>
+                        <div class="circulo pequeno"></div>
+                    
+                        <div class="circulo mayor"></div>
+                        <div class="circulo mayor"></div>
+                    </div>
+                    <!-- Circulo medio -->
+                    <div class="circulos medio">
+                        <div class="circulo camara"></div>
+                        <div class="circulo mascara">
+                            <svg class="svg">
+                                <clipPath id="medio-inferior" clipPathUnits="objectBoundingBox">
+                                    <path
+                                        d="M0.816,0 c-0.006,0.346,-0.146,0.623,-0.316,0.623 C0.33,0.623,0.19,0.346,0.184,0 H0 c0.007,0.554,0.228,1,0.5,1 c0.272,0,0.493,-0.446,0.5,-1 H0.816">
+                                    </path>
+                                </clipPath>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Sombra -->
+                    <div class="sombra-inferior"></div>
+                    <div class="sombra-lateral"></div>
+                    <!-- Mascara -->
+                    <svg class="svg">
+                        <clipPath id="mascara-inferior" clipPathUnits="objectBoundingBox">
+                            <path d="M0,1 h1 V0 H0.671 c-0.005,0.216,-0.08,0.388,-0.171,0.388 c-0.092,0,-0.166,-0.172,-0.171,-0.388 H0 V1">
+                            </path>
+                        </clipPath>
+                    </svg>
+                </div>
+            </div><!-- // Tapa: Inferior -->
+        </div>
+    </div>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
